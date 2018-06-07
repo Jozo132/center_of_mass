@@ -11,18 +11,20 @@ Usage:
   Initialisation:
   
     ~: CenterOfMass test = new CenterOfMass();    // Initialize the class
-    
+  
+  Weight points are added and updated the same way an ArrayList is
+  
   Adding new weight points:
   
-    1D >>  ~: test.add( 0.4 , new PVector(10) );            // add test weight point [0] which weights 0.4 and is at x=10
-    2D >>  ~: test.add( 0.4 , new PVector(10 , 20) );       // add test weight point [1] which weights 0.4 and is at x=10 y=20
-    3D >>  ~: test.add( 0.4 , new PVector(10 , 20 , 15) );  // add test weight point [2] which weights 0.4 and is at x=10 y=20 z=15
+    1D >>  ~: test.add( 0.4 , new PVector(10.0) );               // add test weight point [0] which weights 0.4 and is at x=10
+    2D >>  ~: test.add( 0.4 , new PVector(10.0 , 20.0) );        // add test weight point [1] which weights 0.4 and is at x=10 y=20
+    3D >>  ~: test.add( 0.4 , new PVector(10.0 , 20.0 , 15.0) ); // add test weight point [2] which weights 0.4 and is at x=10 y=20 z=15
 
   Changing existing weight point values:
   
     1D >>  ~: test.set(0, 1.6 , new PVector(9.2) );               // set test weight point [0] to weight 1.6 and position x=9.2
-    2D >>  ~: test.set(1, 1.6 , new PVector(9.2 , 18.9) );        // set test weight point [0] to weight 1.6 and position x=9.2 y=18.2
-    3D >>  ~: test.set(2, 1.6 , new PVector(9.2 , 18.9 , 17.3) ); // set test weight point [0] to weight 1.6 and position x=9.2 y=18.2 z=17.3
+    2D >>  ~: test.set(1, 1.6 , new PVector(9.2 , 18.9) );        // set test weight point [1] to weight 1.6 and position x=9.2 y=18.2
+    3D >>  ~: test.set(2, 1.6 , new PVector(9.2 , 18.9 , 17.3) ); // set test weight point [2] to weight 1.6 and position x=9.2 y=18.2 z=17.3
   
   Calculating input weight points to output center of mass weight and position:
   
