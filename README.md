@@ -7,9 +7,13 @@ You can add any number of weight points in a coordinate system (their mass and l
 The existing points can be updated/changed on the fly so an almost realtime measurement system can be implemented using the class.
 
 Usage:
+  
   Initialisation:
+  
     CenterOfMass test = new CenterOfMass();    // Initialize the class
+    
   Adding new weight points:
+  
     // One dimension (linear)
     ##test.add(0.4, new PVector(10)); // add test weight point [0] which weights 0.4 and is at x=10
     
