@@ -3,45 +3,38 @@
 
 
 class CenterOfMass {
-
   float weight = 0;
   PVector position = new PVector();
   boolean OK = false;
-  
+
   ArrayList weights = new ArrayList();
   ArrayList<PVector> points = new ArrayList();
-  
-  void reset(){
-    weights = new ArrayList(); 
+
+  void reset() {    // Reset all values and delete all weight points
+    weights = new ArrayList();   
     points = new ArrayList();
+    weight = 0;
+    position = new PVector();
   }
-  
-  void add(float weight, PVector point){
+
+  void add(float weight, PVector point) {  // Add new weight point
     weights.add(weight); 
     points.add(point);
   }
-  
-  void set(int poz_temp, float weight, PVector point){
+
+  void set(int poz_temp, float weight, PVector point) {  // Update exisitng wight point
     weights.set(poz_temp, weight); 
     points.set(poz_temp, point);
   }
-  
-  ArrayList get(int poz_temp){
-    ArrayList output_matrix = new ArrayList();
-    output_matrix.add(weights.get(poz_temp));
-    output_matrix.add(points.get(poz_temp));
-    return output_matrix;
-  }
-  
-  int size(){
+
+  int size() {       // Get the number of weight points of the class
     return(weights.size());
   }
-  
-  void calculate() {
+
+  void calculate() {    // Calculate the center of mass from existing weight points
     weight = 0;
     position = new PVector();
     if (weights.size() == points.size()) {
-
       for (int i = 0; i < weights.size(); i++) {
         weight += (float)weights.get(i);
       }
@@ -51,11 +44,11 @@ class CenterOfMass {
         position.y += ((float)weights.get(i)*points.get(i).y);
         position.z += ((float)weights.get(i)*points.get(i).z);
       }
-      
+
       position.x /= weight;
       position.y /= weight;
       position.z /= weight;
-      
+
       OK = true;
       return;
     } else {
@@ -65,8 +58,8 @@ class CenterOfMass {
       return;
     }
   }
-  
-  void calculate(ArrayList weights_temp, ArrayList<PVector> points_temp) {
+
+  void calculate(ArrayList weights_temp, ArrayList<PVector> points_temp) {   // Calculate the center of mass from given ArrayLists
     weight = 0;
     position = new PVector();
     if (weights_temp.size() == points_temp.size()) {
@@ -80,11 +73,11 @@ class CenterOfMass {
         position.y += ((float)weights_temp.get(i)*points_temp.get(i).y);
         position.z += ((float)weights_temp.get(i)*points_temp.get(i).z);
       }
-      
+
       position.x /= weight;
       position.y /= weight;
       position.z /= weight;
-      
+
       OK = true;
       return;
     } else {
