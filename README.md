@@ -26,12 +26,12 @@ Usage:
   
   Calculating input weight points to output center of mass weight and position:
   
-    test.calculate();  // Calculate or update from input values
+    ~: test.calculate();  // Calculate or update from input values
   
   Retrieving or getting output from last calculation:
   
-    float calculated_weight  = test.weight;       // Get output wieght of all forces
-    float calculated_x       = test.position.x;   // Get x position of the center of mass
-    float calculated_y       = test.position.y;   // Get y position of the center of mass
-    float calculated_z       = test.position.z;   // Get z position of the center of mass
+    ~: float calculated_weight  = test.weight;       // Get output wieght of all forces
+    ~: float calculated_x       = test.position.x;   // Get x position of the center of mass
+    ~: float calculated_y       = test.position.y;   // Get y position of the center of mass
+    ~: float calculated_z       = test.position.z;   // Get z position of the center of mass
   
