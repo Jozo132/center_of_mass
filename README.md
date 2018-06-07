@@ -14,11 +14,11 @@ Usage:
     
   Adding new weight points:
   
-    // One dimension (linear)
-    ##test.add(0.4, new PVector(10)); // add test weight point [0] which weights 0.4 and is at x=10
+    One dimension (linear)
+    ##test.add(0.4, new PVector(10)); // add test weight point [0] which weights 0.4 and is at x=10##
     
-    // Two dimensions (planar)
-    ##test.add(0.4, new PVector(10, 20)); // add test weight point [0] which weights 0.4 and is at x=10 and y=20
+    Two dimensions (planar)
+    ##test.add(0.4, new PVector(10, 20)); // add test weight point [0] which weights 0.4 and is at x=10 and y=20##
     
-    // Three dimensional
-    ##test.add(0.4, new PVector(10, 20, 15)); // add test weight point [0] which weights 0.4 and is at x=10, y=20 and z=15
+    Three dimensional
+    ##test.add(0.4, new PVector(10, 20, 15)); // add test weight point [0] which weights 0.4 and is at x=10, y=20 and z=15##
