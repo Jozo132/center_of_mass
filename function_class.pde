@@ -8,9 +8,11 @@ class CenterOfMass {
    *
    *  Copyright 2018 by Jozo132 <jozo132@gmail.com>
    *  Licensed under GNU General Public License 3.0 or later.
-   *   
-   *  Feel free to reuse and/or redistribute this portion of the program (this class)
-   *  for any and all uses, either commercial or free.
+   *  
+   *  Special note:
+   *    Feel free to reuse and/or redistribute this portion of the program (this class)
+   *    for any and all uses, either commercial or free as long as this notice is kept
+   *    in the source code.
    * 
    *---------------------------------------------------------------------------
    *  This program is free software: you can redistribute it and/or modify
